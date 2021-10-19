@@ -1,0 +1,33 @@
+{
+    "name": "Dans ma bulle",
+    "description": "Un peu de légèreté dans ce monde de brutes ! (Valable uniquement sur Chrome et performant suivant la structure des sites, à ce stade)",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+        "matches": ["<all_urls>"],
+        "js": ["appAuto.js", "appOptions.js"]
+        }
+    ],
+    "permissions": ["tabs", "storage", "activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "degrade1_16.png",
+            "48": "degrade1_48.png",
+            "128": "degrade1_128.png"
+          }
+        },
+        "icons": {
+          "16": "degrade1_16.png",
+          "48": "degrade1_48.png",
+          "128": "degrade1_128.png"
+        },   
+    "web_accessible_resources":[
+        {
+        "matches": ["<all_urls>"],
+        "resources": ["degrade1.svg"]
+        }
+    ]
+  }
+
